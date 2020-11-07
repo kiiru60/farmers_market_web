@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
+  <meta name="description" content="A new Flutter project.">
+
+  <!-- iOS meta tags & icons -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="farmers_market_web">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" type="image/png" href="favicon.png"/>
+
+  <title>farmers_market_web</title>
+  <link rel="manifest" href="manifest.json">
+</head>
+<body>
+  
+  <!-- This script installs service_worker.js to provide PWA functionality to
+       application. For more information, see:
+       https://developers.google.com/web/fundamentals/primers/service-workers -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('flutter_service_worker.js');
+      });
+    }
+  </script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+
+  <!-- TODO: Add SDKs for Firebase products that you want to use-->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-firestorage.js"></script>
+   <!-- Initialize Firebase -->
+   <script src="/__/firebase/init.js"></script>
+   
+
+      <!-- https://firebase.google.com/docs/web/setup#available-libraries -->
+  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-analytics.js"></script>
+  
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      apiKey: "AIzaSyApaoGC4PFLGCVOYggYNTqD3pfKTu3KmqY",
+      authDomain: "market-goods.firebaseapp.com",
+      databaseURL: "https://market-goods.firebaseio.com",
+      projectId: "market-goods",
+      storageBucket: "market-goods.appspot.com",
+      messagingSenderId: "209986240392",
+      appId: "1:209986240392:web:2a4363cf3e24353aa6443d",
+      measurementId: "G-RB0SQLNPZZ"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+  </script>
+  <script src="main.dart.js" type="application/javascript"></script>
+</body>
+</html>
