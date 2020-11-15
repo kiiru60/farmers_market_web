@@ -1,5 +1,6 @@
 import 'package:farmers_market_web/blocs/auth_bloc.dart';
 import 'package:farmers_market_web/blocs/product_bloc.dart';
+import 'package:farmers_market_web/customerWidgets/homeviewScreens/screen_one.dart';
 import 'package:farmers_market_web/sections/bottom_navigator.dart';
 import 'package:farmers_market_web/sections/footer.dart';
 import 'package:farmers_market_web/styles/colors.dart';
@@ -7,6 +8,7 @@ import 'package:farmers_market_web/vendorWidgets/about.dart';
 import 'package:farmers_market_web/vendorWidgets/account.dart';
 import 'package:farmers_market_web/vendorWidgets/favorites.dart';
 import 'package:farmers_market_web/vendorWidgets/setttings.dart';
+import 'package:farmers_market_web/widgets/profileNavigation.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -21,9 +23,10 @@ class Profile extends StatelessWidget {
         child: Column(
           children: [
             Container(
-              height: 620,
+              height: 820,
+              width: MediaQuery.of(context).size.width,
               color: Colors.white,
-              child: pageBody(context),
+              child: ProfileNavigation(),
             ),
             //bottom container
             Container(
