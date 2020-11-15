@@ -1,3 +1,4 @@
+import 'package:farmers_market_web/styles/colors.dart';
 import 'package:flutter/material.dart';
 
 class ProfileNavigation extends StatefulWidget {
@@ -15,12 +16,27 @@ class _ProfileNavigationState extends State<ProfileNavigation> {
     Container(
       height: 820,
       //width: 200,
-      color: Colors.blue,
+      color: AppColors.white,
     ),
     Container(
       height: 820,
       //width: 200,
-      color: Colors.green,
+      color: AppColors.white,
+    ),
+    Container(
+      height: 820,
+      //width: 200,
+      color: AppColors.white,
+    ),
+    Container(
+      height: 820,
+      //width: 200,
+      color: AppColors.white,
+    ),
+    Container(
+      height: 820,
+      //width: 200,
+      color: AppColors.white,
     ),
   ];
   @override
@@ -36,16 +52,37 @@ class _ProfileNavigationState extends State<ProfileNavigation> {
             });
           },
           labelType: NavigationRailLabelType.selected,
-          backgroundColor: Colors.amberAccent,
+          backgroundColor: AppColors.lightgray,
           groupAlignment: 0,
           destinations: [
             NavigationRailDestination(
-              label: Text('drink'),
-              icon: Icon(Icons.favorite_border),
+              label: Text('My Account'),
+              icon: Icon(Icons.person),
             ),
             NavigationRailDestination(
-              label: Text('donuts'),
-              icon: Icon(Icons.bookmark_border),
+              label: Text('Favourites'),
+              icon: Icon(Icons.favorite),
+            ),
+            NavigationRailDestination(
+              label: Text('Settings'),
+              icon: Icon(
+                Icons.settings,
+                color: Colors.blue,
+              ),
+            ),
+            NavigationRailDestination(
+              label: Text('About'),
+              icon: Icon(
+                Icons.help,
+                color: Colors.green,
+              ),
+            ),
+            NavigationRailDestination(
+              label: Text('Log out'),
+              icon: Icon(
+                Icons.transit_enterexit,
+                color: Colors.red,
+              ),
             ),
           ],
           selectedIndex: _selectedIndex,
